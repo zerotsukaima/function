@@ -1,8 +1,9 @@
 def a(n):
     if n == 1:
-        print(1)
+        return 1
     else:
-        b = n - a * (a * (n - 1))
+        y = n - a(a(n - 1))
+        return y
 
-n = int(input("Введите число "))
-print(a(n))
+for i in range(1, 10):
+    print(a(i), end=' ')
